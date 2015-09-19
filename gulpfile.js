@@ -35,29 +35,29 @@ gulp.task('vendor-css', ['clean'], function() {
 });
 
 gulp.task('copy-src', ['clean'], function() {
-    return gulp.src('src/**/*')
+    return gulp.src('src/**/*.{js,css,json,png}')
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('update-js', function() {
+gulp.task('copy-js', function() {
     return gulp.src('src/**/*.js')
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('update-css', function() {
+gulp.task('copy-css', function() {
     return gulp.src('src/**/*.css')
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('update-json', function() {
+gulp.task('copy-json', function() {
     return gulp.src('src/**/*.json')
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/**/*.js', ['lint', 'update-js']);
-    gulp.watch('src/**/*.css', ['update-css']);
-    gulp.watch('src/**/*.json', ['update-json']);
+    gulp.watch('src/**/*.js', ['lint', 'copy-js']);
+    gulp.watch('src/**/*.css', ['copy-css']);
+    gulp.watch('src/**/*.json', ['copy-json']);
 });
 
 gulp.task('default', ['clean', 'lint', 'vendor-js', 'vendor-css', 'copy-src']);
