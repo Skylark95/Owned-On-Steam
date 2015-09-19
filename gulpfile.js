@@ -35,12 +35,17 @@ gulp.task('vendor-css', ['clean'], function() {
 });
 
 gulp.task('copy-src', ['clean'], function() {
-    return gulp.src('src/**/*.{js,css,json,png}')
+    return gulp.src('src/**/*.{js,html,css,json,png}')
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('copy-js', function() {
     return gulp.src('src/**/*.js')
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('copy-html', function() {
+    return gulp.src('src/**/*.html')
         .pipe(gulp.dest('dist'));
 });
 
@@ -56,6 +61,7 @@ gulp.task('copy-json', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/**/*.js', ['lint', 'copy-js']);
+    gulp.watch('src/**/*.html', ['copy-html']);
     gulp.watch('src/**/*.css', ['copy-css']);
     gulp.watch('src/**/*.json', ['copy-json']);
 });
