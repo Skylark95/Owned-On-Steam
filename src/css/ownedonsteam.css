@@ -1,0 +1,100 @@
+.oos_ownership_link {
+    text-decoration: none;
+}
+
+.oos_ownership {
+    color: #FFFFFF;
+    padding: 3px;
+    margin-right: 4px;
+    font-size: small;
+    border-radius: 5px;
+}
+
+.oos_loading {
+    background-color: #040a0d;
+}
+
+.oos_owned {
+    background-color: #5C7836;
+}
+
+.oos_possible {
+    background-color: #6b2269;
+}
+
+.oos_error {
+    background-color: #FF0000;
+}
+
+.oos_not_owned {
+    background-color: #16212E;
+}
+
+.oos_multi {
+    background-color: #a75124;
+}
+
+@keyframes blink {
+    /**
+     * At the start of the animation the dot
+     * has an opacity of .2
+     */
+    0% {
+      opacity: .2;
+    }
+    /**
+     * At 20% the dot is fully visible and
+     * then fades out slowly
+     */
+    20% {
+      opacity: 1;
+    }
+    /**
+     * Until it reaches an opacity of .2 and
+     * the animation can start again
+     */
+    100% {
+      opacity: .2;
+    }
+}
+
+.oos_loading span {
+    /**
+     * Use the blink animation, which is defined above
+     */
+    animation-name: blink;
+    /**
+     * The animation should take 1.4 seconds
+     */
+    animation-duration: 1.4s;
+    /**
+     * It will repeat itself forever
+     */
+    animation-iteration-count: infinite;
+    /**
+     * This makes sure that the starting style (opacity: .2)
+     * of the animation is applied before the animation starts.
+     * Otherwise we would see a short flash or would have
+     * to set the default styling of the dots to the same
+     * as the animation. Same applies for the ending styles.
+     */
+    animation-fill-mode: both;
+}
+
+.oos_loading span:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .2s;
+}
+
+.oos_loading span:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .4s;
+}

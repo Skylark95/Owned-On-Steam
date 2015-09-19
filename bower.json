@@ -1,0 +1,21 @@
+{
+  "name": "Owned-On-Steam",
+  "version": "0.0.1",
+  "description": "Display ownership of Steam games on other stores.",
+  "authors": [
+    "Derek <derek@skylark95.com>"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "https://www.skylark95.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "tooltipster": "~3.3.0"
+  }
+}
