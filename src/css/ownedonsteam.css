@@ -4,10 +4,15 @@
 
 .oos_ownership {
     color: #FFFFFF;
+    font-weight: bold;
     padding: 3px;
     margin-right: 4px;
     font-size: small;
-    border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.oos_ownership_border {
+    border: 1px solid #FFFFFF;
 }
 
 .oos_loading {

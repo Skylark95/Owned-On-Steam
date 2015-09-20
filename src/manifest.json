@@ -33,19 +33,35 @@
     "http://steamcommunity.com/*"
   ],
   "content_scripts": [
-    {
-      "matches": [
-        "*://www.humblebundle.com/store/*"
-      ],
-      "js": [
-        "js/vendor.min.js",
-        "js/inject/oos_humblestore.js"
-      ],
-      "css": [
-        "css/vendor.min.css",
-        "css/ownedonsteam.css"
-      ],
-      "run_at": "document_end"
-    }
+        {
+          "matches": [
+            "*://www.humblebundle.com/store/*"
+          ],
+          "js": [
+            "js/vendor.min.js",
+            "js/inject/oos_inject_common.js",
+            "js/inject/oos_humblestore.js"
+          ],
+          "css": [
+            "css/vendor.min.css",
+            "css/ownedonsteam.css"
+          ],
+          "run_at": "document_end"
+      },
+      {
+        "matches": [
+          "*://www.greenmangaming.com/s/*/pc/games/*"
+        ],
+        "js": [
+          "js/vendor.min.js",
+          "js/inject/oos_inject_common.js",
+          "js/inject/oos_greenmangaming.js"
+        ],
+        "css": [
+          "css/vendor.min.css",
+          "css/ownedonsteam.css"
+        ],
+        "run_at": "document_end"
+      }
   ]
 }
