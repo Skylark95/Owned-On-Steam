@@ -1,67 +1,92 @@
 {
-  "name": "Owned On Steam",
-  "version": "0.0.1",
-  "manifest_version": 2,
-  "minimum_chrome_version": "40",
-  "description": "Display ownership of Steam games on other stores.",
-  "homepage_url": "http://www.skylark95.com",
-  "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
-  },
-  "background": {
-    "scripts": [
-      "js/vendor.min.js",
-      "js/bg/ownedonsteam.js"
-    ],
-    "persistent": false
-  },
-  "options_ui": {
-      "page": "options.html",
-      "chrome_style": true
-  },
-  "page_action": {
-    "default_icon": {
-      "19": "icons/icon19.png",
-      "38": "icons/icon38.png"
+    "name": "Owned On Steam",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "minimum_chrome_version": "40",
+    "description": "Display ownership of Steam games on other stores.",
+    "homepage_url": "http://www.skylark95.com",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
     },
-    "default_title": "Owned On Steam"
-  },
-  "permissions": [
-    "storage",
-    "http://steamcommunity.com/*"
-  ],
-  "content_scripts": [
-        {
-          "matches": [
+    "background": {
+        "scripts": [
+            "js/vendor.min.js",
+            "js/bg/ownedonsteam.js"
+        ],
+        "persistent": false
+    },
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+    "page_action": {
+        "default_icon": {
+            "19": "icons/icon19.png",
+            "38": "icons/icon38.png"
+        },
+        "default_title": "Owned On Steam"
+    },
+    "permissions": [
+        "storage",
+        "http://steamcommunity.com/*"
+    ],
+    "content_scripts": [{
+        "matches": [
             "*://www.humblebundle.com/store/*"
-          ],
-          "js": [
+        ],
+        "js": [
             "js/vendor.min.js",
             "js/inject/oos_inject_common.js",
             "js/inject/oos_humblestore.js"
-          ],
-          "css": [
-            "css/vendor.min.css",
-            "css/ownedonsteam.css"
-          ],
-          "run_at": "document_end"
-      },
-      {
-        "matches": [
-          "*://www.greenmangaming.com/s/*/pc/games/*"
-        ],
-        "js": [
-          "js/vendor.min.js",
-          "js/inject/oos_inject_common.js",
-          "js/inject/oos_greenmangaming.js"
         ],
         "css": [
-          "css/vendor.min.css",
-          "css/ownedonsteam.css"
+            "css/vendor.min.css",
+            "css/ownedonsteam.css"
         ],
         "run_at": "document_end"
-      }
-  ]
+    }, {
+        "matches": [
+            "*://www.greenmangaming.com/s/*/pc/games/*"
+        ],
+        "js": [
+            "js/vendor.min.js",
+            "js/inject/oos_inject_common.js",
+            "js/inject/oos_greenmangaming.js"
+        ],
+        "css": [
+            "css/vendor.min.css",
+            "css/ownedonsteam.css"
+        ],
+        "run_at": "document_end"
+    }, {
+        "matches": [
+            "*://www.indiegala.com/store/product/*"
+        ],
+        "js": [
+            "js/vendor.min.js",
+            "js/inject/oos_inject_common.js",
+            "js/inject/oos_indiegala.js"
+        ],
+        "css": [
+            "css/vendor.min.css",
+            "css/ownedonsteam.css"
+        ],
+        "run_at": "document_end"
+    }, {
+        "matches": [
+            "*://www.wingamestore.com/product/*"
+        ],
+        "js": [
+            "js/vendor.min.js",
+            "js/inject/oos_inject_common.js",
+            "js/inject/oos_wingamestore.js"
+        ],
+        "css": [
+            "css/vendor.min.css",
+            "css/ownedonsteam.css"
+        ],
+        "run_at": "document_end"
+    }]
 }
