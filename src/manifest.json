@@ -38,7 +38,7 @@
         ],
         "js": [
             "js/vendor.min.js",
-            "js/inject/oos_inject_common.js",
+            "js/inject/oos_injector.js",
             "js/inject/oos_humblestore.js"
         ],
         "css": [
@@ -52,7 +52,7 @@
         ],
         "js": [
             "js/vendor.min.js",
-            "js/inject/oos_inject_common.js",
+            "js/inject/oos_injector.js",
             "js/inject/oos_greenmangaming.js"
         ],
         "css": [
@@ -62,11 +62,11 @@
         "run_at": "document_end"
     }, {
         "matches": [
-            "*://www.indiegala.com/store/product/*"
+            "*://www.indiegala.com/*"
         ],
         "js": [
             "js/vendor.min.js",
-            "js/inject/oos_inject_common.js",
+            "js/inject/oos_injector.js",
             "js/inject/oos_indiegala.js"
         ],
         "css": [
@@ -80,7 +80,7 @@
         ],
         "js": [
             "js/vendor.min.js",
-            "js/inject/oos_inject_common.js",
+            "js/inject/oos_injector.js",
             "js/inject/oos_wingamestore.js"
         ],
         "css": [

@@ -16,7 +16,7 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('default'));
 });
 
-gulp.task('vendor-js', ['clean'], function() {
+gulp.task('vendor-js', function() {
     return gulp.src([
         'bower_components/jquery/dist/jquery.js',
         'bower_components/tooltipster/js/jquery.tooltipster.js'
@@ -27,43 +27,43 @@ gulp.task('vendor-js', ['clean'], function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('vendor-css', ['clean'], function() {
+gulp.task('vendor-css', function() {
     return gulp.src('bower_components/tooltipster/css/tooltipster.css')
         .pipe(minifyCss())
         .pipe(rename('vendor.min.css'))
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('copy-src', ['clean'], function() {
-    return gulp.src('src/**/*.{js,html,css,json,png}')
+gulp.task('copy-src', function() {
+    return gulp.src([
+        'src/css/*.css',
+        'src/icons/*.png',
+        'src/js/inject/*.js',
+        'src/js/*.js',
+        'src/*.json',
+        'src/*.html'
+    ], {base: 'src'})
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('copy-js', function() {
-    return gulp.src('src/**/*.js')
-        .pipe(gulp.dest('dist'));
-});
-
-gulp.task('copy-html', function() {
-    return gulp.src('src/**/*.html')
-        .pipe(gulp.dest('dist'));
-});
-
-gulp.task('copy-css', function() {
-    return gulp.src('src/**/*.css')
-        .pipe(gulp.dest('dist'));
-});
-
-gulp.task('copy-json', function() {
-    return gulp.src('src/**/*.json')
-        .pipe(gulp.dest('dist'));
+gulp.task('concat-src', function() {
+    return gulp.src('src/js/bg/*.js')
+        .pipe(concat('ownedonsteam.js'))
+        .pipe(gulp.dest('dist/js/bg'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/**/*.js', ['lint', 'copy-js']);
-    gulp.watch('src/**/*.html', ['copy-html']);
-    gulp.watch('src/**/*.css', ['copy-css']);
-    gulp.watch('src/**/*.json', ['copy-json']);
+    gulp.watch('src/js/bg/*.js', ['lint', 'concat-src']);
+    gulp.watch([
+        'src/js/*.js',
+        'src/js/inject/*.js'
+    ], ['lint', 'copy-src']);
+    gulp.watch([
+        'src/css/*.css',
+        'src/icons/*.png',
+        'src/*.json',
+        'src/*.html'
+    ], ['copy-src']);
 });
 
-gulp.task('default', ['clean', 'lint', 'vendor-js', 'vendor-css', 'copy-src']);
+gulp.task('default', ['lint', 'vendor-js', 'vendor-css', 'concat-src', 'copy-src']);
