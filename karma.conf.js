@@ -15,8 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/js/**/*.js',
-      'test/**/*.js'
+      'bower_components/jquery/dist/jquery.min.js',
+      'bower_components/tooltipster/js/jquery.tooltipster.min.js',
+      'test/mocks.js',
+      'src/js/bg/*.js',
+      'test/**/*Spec.js'
     ],
 
 
@@ -62,5 +65,5 @@ module.exports = function(config) {
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false
-  })
-}
+});
+};

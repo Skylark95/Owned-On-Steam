@@ -2,9 +2,9 @@ var gulp = require('gulp');
 var del = require('del');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifyCss = require('gulp-minify-css');
+var Server = require('karma').Server;
 
 gulp.task('clean', function() {
     return del('dist/**/*');
@@ -16,14 +16,19 @@ gulp.task('lint', function() {
         .pipe(jshint.reporter('default'));
 });
 
+gulp.task('karma', function(done) {
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, done).start();
+});
+
 gulp.task('vendor-js', function() {
     return gulp.src([
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/tooltipster/js/jquery.tooltipster.js'
+        'bower_components/jquery/dist/jquery.min.js',
+        'bower_components/tooltipster/js/jquery.tooltipster.min.js'
     ])
         .pipe(concat('vendor.min.js'))
-        .pipe(gulp.dest('dist/js'))
-        .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 
@@ -66,4 +71,4 @@ gulp.task('watch', function() {
     ], ['copy-src']);
 });
 
-gulp.task('default', ['lint', 'vendor-js', 'vendor-css', 'concat-src', 'copy-src']);
+gulp.task('default', ['lint', 'karma', 'vendor-js', 'vendor-css', 'concat-src', 'copy-src']);
