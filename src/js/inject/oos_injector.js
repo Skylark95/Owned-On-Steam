@@ -50,11 +50,11 @@ OOS.injector = {
         $('.oos_ownership').addClass(classToAdd);
     },
     /**
-     * Adds a CSS class to the owernshipLink
+     * Adds CSS to the ownershipSpan
      * @private
      */
-    addClassToLink: function(classToAdd) {
-        $('.oos_ownership_link').addClass(classToAdd);
+    addCssToSpan: function(css) {
+        $('.oos_ownership').css(css);
     },
     /**
      * Adds a white border to the owernshipSpan to make it more
@@ -62,6 +62,15 @@ OOS.injector = {
      */
     addBorder: function() {
         this.addClassToSpan('oos_ownership_border');
+    },
+    /**
+     * Adds spacing around the ownershipSpan using relative position
+     * @param {object} options - config object for relative positioning (ex: {top: '5px'})
+     */
+    addSpacing: function(options) {
+        var css = options || {};
+        css.position = 'relative';
+        this.addCssToSpan(css);
     },
     /**
      * Helper method to inject the owernshipSpan for a game
