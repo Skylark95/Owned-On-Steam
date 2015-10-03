@@ -18,25 +18,25 @@ to determine if you own the game being displayed.
 
 **Possible Results:**
 
-<span style="background-color:#5C7836; color:#FFFFFF; font-weight:bold; padding: 3px; font-size: small; border-radius: 5px 5px 5px 5px;">Owned</span>
+![Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/owned.png "Owned")
 * Match found in Steam Library
 
-<span style="background-color:#6b2269; color:#FFFFFF; font-weight:bold; padding: 3px; font-size: small; border-radius: 5px 5px 5px 5px;">Possibly Owned</span>
+![Possibly Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned.png "Possibly Owned")
 * A match was found using an "Aggressive Search" pattern.  Results may not be as accurate.
 
-<span style="background-color:#a75124; color:#FFFFFF; font-weight:bold; padding: 3px; font-size: small; border-radius: 5px 5px 5px 5px;">Possibly Owned</span>
+![Possibly Owned Multi](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned_multi.png "Possibly Owned Multi")
 * Multiple matches were found using an "Aggressive Search" pattern.  Results may not be as accurate.
 
-<span style="background-color:#16212E; color:#FFFFFF; font-weight:bold; padding: 3px; font-size: small; border-radius: 5px 5px 5px 5px;">Not Owned</span>
+![Not Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/not_owned.png "Not Owned")
 * Basic and Aggressive search did not find any matching game titles.
 
-<span style="background-color:#040a0d; color:#FFFFFF; font-weight:bold; padding: 3px; font-size: small; border-radius: 5px 5px 5px 5px;">Loading...</span>
+![Loading](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/loading.png "Loading")
 * Owned On Steam is loading ownership
 
-<span style="background-color:#FF0000; color:#FFFFFF; font-weight:bold; padding: 3px; font-size: small; border-radius: 5px 5px 5px 5px;">Error</span>
+![Error](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/error.png "Error")
 * An error occurred while loading ownership
 
-<span style="background-color:#CC0000; color:#FFFFFF; font-weight:bold; padding: 3px; font-size: small; border-radius: 5px 5px 5px 5px;">Steam ID Not Set</span>
+![Steam ID Not Set](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/steamid_error.png "Steam ID Not Set")
 * Steam ID was not set in settings.
 
 \****Disclaimer:*** Owned on Steam guesses ownership based on the title and accuracy
