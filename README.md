@@ -12,27 +12,39 @@ to your 17 character Steam ID.*
 
 ## Usage
 Owned on Steam will automatically activate when looking at an individual game
-on a supported store.  Displaying results for multiple games is not supported. Upon activation, the game title will be searched for in
-your Steam library and Owned on Steam will take a ***"best guess"***\* effort
-to determine if you own the game being displayed.
+on a supported store.  Displaying results for multiple games is not supported.
+Upon activation, the game title will be searched for in your Steam library and
+Owned on Steam will take a ***"best guess"***\* effort to determine if you own
+the game being displayed.
 
 **Possible Results:**
 
-The results below will be shown next to or near the price of the game on most sites.
+The result tags below will be shown next to or near the price of the game on
+most sites.  You may hover your mouse over the result tag for more information.  Clicking on the result tag will either open the game on Steam or open a search
+for the game on Steam depending on the result.
 
-![Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/owned.png "Owned") Match found in Steam Library
+![Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/owned.png "Owned")
+Match found in Steam Library
 
-![Possibly Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned.png "Possibly Owned") A match was found using an "Aggressive Search" pattern.  Results may not be as accurate.
+![Possibly Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned.png "Possibly Owned")
+A match was found using an "Aggressive Search" pattern.
+Results may not be as accurate.
 
-![Possibly Owned Multi](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned_multi.png "Possibly Owned Multi") Multiple matches were found using an "Aggressive Search" pattern.  Results may not be as accurate.
+![Possibly Owned Multi](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned_multi.png "Possibly Owned Multi")
+Multiple matches were found using an "Aggressive Search" pattern.
+Results may not be as accurate.
 
-![Not Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/not_owned.png "Not Owned") Basic and Aggressive search did not find any matching game titles.
+![Not Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/not_owned.png "Not Owned")
+Basic and Aggressive search did not find any matching game titles.
 
-![Loading](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/loading.png "Loading") Owned On Steam is loading ownership
+![Loading](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/loading.png "Loading")
+Owned On Steam is loading ownership
 
-![Error](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/error.png "Error") An error occurred while loading ownership
+![Error](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/error.png "Error")
+An error occurred while loading ownership
 
-![Steam ID Not Set](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/steamid_error.png "Steam ID Not Set") Steam ID was not set in settings.
+![Steam ID Not Set](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/steamid_error.png "Steam ID Not Set")
+Steam ID was not set in settings.
 
 \****Disclaimer:*** Owned on Steam guesses ownership based on the title and accuracy
 cannot be guaranteed.  It is recommended you validate ownership of a game prior to purchase.
