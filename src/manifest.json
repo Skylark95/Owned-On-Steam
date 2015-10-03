@@ -88,5 +88,19 @@
             "css/ownedonsteam.css"
         ],
         "run_at": "document_end"
+    }, {
+        "matches": [
+            "*://www.gamersgate.com/DD-*"
+        ],
+        "js": [
+            "js/vendor.min.js",
+            "js/inject/oos_injector.js",
+            "js/inject/oos_gamersgate.js"
+        ],
+        "css": [
+            "css/vendor.min.css",
+            "css/ownedonsteam.css"
+        ],
+        "run_at": "document_end"
     }]
 }

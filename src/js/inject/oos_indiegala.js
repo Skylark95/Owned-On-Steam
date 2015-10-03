@@ -16,7 +16,6 @@ OOS.store.indiegala = function(injector) {
                     clearInterval(waitForDom);
                     injector.injectOwnership($('.modal[aria-hidden="false"] .full_game_title').text(), function(response) {
                         $('.tit_game').append(response.ownershipSpan);
-                        injector.addTopMargin();
                     });
                 }
             }, 250);

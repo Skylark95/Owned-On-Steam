@@ -3,7 +3,7 @@
 }
 
 .oos_ownership {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-weight: bold;
     padding: 3px;
     margin-right: 4px;
@@ -16,6 +16,10 @@
 }
 
 .oss_ownership_margin_top {
+    margin-top: 5px;
+}
+
+.oss_ownership_margin_bottom {
     margin-top: 5px;
 }
 
@@ -41,6 +45,38 @@
 
 .oos_multi {
     background-color: #a75124;
+}
+
+.oos_tooltipster_dark_border {
+	border-radius: 5px;
+	border: 1px solid #000000;
+	background: #4c4c4c;
+	color: #FFFFFF !important;
+}
+
+.oos_tooltipster_light_border {
+	border-radius: 5px;
+	border: 1px solid #FFFFFF;
+	background: #4c4c4c;
+	color: #FFFFFF !important;
+}
+
+.oos_tooltipster_dark_border .tooltipster-content {
+    color: #FFFFFF !important;
+    font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 10px;
+	overflow: hidden;
+}
+
+.oos_tooltipster_light_border .tooltipster-content {
+    color: #FFFFFF !important;
+    font-family: Arial, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 8px 10px;
+	overflow: hidden;
 }
 
 @keyframes blink {
