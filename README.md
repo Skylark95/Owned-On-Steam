@@ -18,19 +18,19 @@ to determine if you own the game being displayed.
 
 **Possible Results:**
 
-![Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/owned.png "Owned") - Match found in Steam Library
+![Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/owned.png "Owned") Match found in Steam Library
 
-![Possibly Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned.png "Possibly Owned") - A match was found using an "Aggressive Search" pattern.  Results may not be as accurate.
+![Possibly Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned.png "Possibly Owned") A match was found using an "Aggressive Search" pattern.  Results may not be as accurate.
 
-![Possibly Owned Multi](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned_multi.png "Possibly Owned Multi") - Multiple matches were found using an "Aggressive Search" pattern.  Results may not be as accurate.
+![Possibly Owned Multi](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/possibly_owned_multi.png "Possibly Owned Multi") Multiple matches were found using an "Aggressive Search" pattern.  Results may not be as accurate.
 
-![Not Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/not_owned.png "Not Owned") - Basic and Aggressive search did not find any matching game titles.
+![Not Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/not_owned.png "Not Owned") Basic and Aggressive search did not find any matching game titles.
 
-![Loading](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/loading.png "Loading") - Owned On Steam is loading ownership
+![Loading](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/loading.png "Loading") Owned On Steam is loading ownership
 
-![Error](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/error.png "Error") - An error occurred while loading ownership
+![Error](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/error.png "Error") An error occurred while loading ownership
 
-![Steam ID Not Set](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/steamid_error.png "Steam ID Not Set") - Steam ID was not set in settings.
+![Steam ID Not Set](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/steamid_error.png "Steam ID Not Set") Steam ID was not set in settings.
 
 \****Disclaimer:*** Owned on Steam guesses ownership based on the title and accuracy
 cannot be guaranteed.  It is recommended you validate ownership of a game prior to purchase.
