@@ -13,7 +13,7 @@ OOS.html = {
         return '<a href="http://store.steampowered.com/search/?term=' + encodeURIComponent(title) + '" target="_blank" title="<strong>An Error Occurred:</strong> \'' + error + '\'<br><br>Click To Search Steam for \'' + title + '\'" class="oos_ownership_link"><span class="oos_ownership oos_error">Error</span></a>';
     },
     buildSteamIdErrorSpan: function(title) {
-        return '<a href="http://store.steampowered.com/search/?term=' + encodeURIComponent(title) + '" target="_blank" title="<strong>Go to the extention options page to set your Steam ID</strong><br><br>Click To Search Steam for \'' + title + '\'" class="oos_ownership_link"><span class="oos_ownership oos_error">Steam ID Not Set</span></a>';
+        return '<a href="http://store.steampowered.com/search/?term=' + encodeURIComponent(title) + '" target="_blank" title="<strong>Go to the extention options page to set your Steam ID</strong><br><br>Click To Search Steam for \'' + title + '\'" class="oos_ownership_link"><span class="oos_ownership oos_steamid_error">Steam ID Not Set</span></a>';
     },
     buildNotOwnedSpan: function(title) {
         return '<a href="http://store.steampowered.com/search/?term=' + encodeURIComponent(title) + '" target="_blank" title="Click To Search Steam for \'' + title + '\'" class="oos_ownership_link"><span class="oos_ownership oos_not_owned">Not Owned</span></a>';

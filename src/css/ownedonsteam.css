@@ -31,6 +31,10 @@
     background-color: #FF0000;
 }
 
+.oos_steamid_error {
+    background-color: #CC0000;
+}
+
 .oos_not_owned {
     background-color: #16212E;
 }

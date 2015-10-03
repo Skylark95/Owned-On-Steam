@@ -16,7 +16,7 @@ describe("OOS.html", function() {
         expect(OOS.html.buildGenericErrorSpan('Oops', 'Half-Life 2')).toEqual(expected);
     });
     it("can build buildSteamIdErrorSpan", function() {
-        var expected = '<a href="http://store.steampowered.com/search/?term=Half-Life%202" target="_blank" title="<strong>Go to the extention options page to set your Steam ID</strong><br><br>Click To Search Steam for \'Half-Life 2\'" class="oos_ownership_link"><span class="oos_ownership oos_error">Steam ID Not Set</span></a>';
+        var expected = '<a href="http://store.steampowered.com/search/?term=Half-Life%202" target="_blank" title="<strong>Go to the extention options page to set your Steam ID</strong><br><br>Click To Search Steam for \'Half-Life 2\'" class="oos_ownership_link"><span class="oos_ownership oos_steamid_error">Steam ID Not Set</span></a>';
         expect(OOS.html.buildSteamIdErrorSpan('Half-Life 2')).toEqual(expected);
     });
     it("can build buildNotOwnedSpan", function() {
