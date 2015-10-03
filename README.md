@@ -1,5 +1,5 @@
 # Owned On Steam
-Display ownership of Steam games on other stores
+**Display ownership of Steam games on other stores.**
 
 ## Add Steam ID
 After installing navigate to ***chrome://extensions*** and select ***Options***
@@ -12,11 +12,13 @@ to your 17 character Steam ID.*
 
 ## Usage
 Owned on Steam will automatically activate when looking at an individual game
-on a supported store.  Upon activation, the game title will be search for in
+on a supported store.  Displaying results for multiple games is not supported. Upon activation, the game title will be searched for in
 your Steam library and Owned on Steam will take a ***"best guess"***\* effort
 to determine if you own the game being displayed.
 
 **Possible Results:**
+
+The results below will be shown next to or near the price of the game on most sites.
 
 ![Owned](https://raw.githubusercontent.com/Skylark95/Owned-On-Steam/master/images/results/owned.png "Owned") Match found in Steam Library
 
