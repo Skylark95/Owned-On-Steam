@@ -18,6 +18,7 @@ module.exports = function(config) {
       'bower_components/jquery/dist/jquery.min.js',
       'bower_components/tooltipster/js/jquery.tooltipster.min.js',
       'test/mocks.js',
+      'test/PromiseTester.js',
       'src/js/bg/*.js',
       'test/**/*Spec.js'
     ],
