@@ -59,3 +59,25 @@ Owned On Steam currently supports the following stores:
 * [wingamestore.com](http://www.wingamestore.com/)
 
 *This list will be updated as support for more stores is added.*
+
+## Developer Guide
+### Checkout
+To build Owned On Steam you will need the following tools:
+* [nodejs](https://nodejs.org/)
+* [bower](http://bower.io/)
+* [gulp](http://gulpjs.com/)
+* [karma](https://karma-runner.github.io/)
+
+After checking out the repository, run the following commands:
+* `npm install`
+* `bower install`
+
+### Building
+To build the extension, run `gulp` to output the extension to the `dist` directory.
+
+To test the build in Chrome, [load as an unpacked extension](https://developer.chrome.com/extensions/getstarted#unpacked).
+
+### Unit Tests
+Owned On Steam uses [karma](https://karma-runner.github.io/) to run unit tests.
+
+To run the tests, enter `karma start`.
