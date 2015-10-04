@@ -1,5 +1,6 @@
 describe("OOS.html", function() {
-    var title,
+    var html,
+        title,
         appId,
         multipleMatches,
         expectedError,
@@ -12,6 +13,7 @@ describe("OOS.html", function() {
         expectedMultipleSpan;
 
     beforeEach(function() {
+        html = OOS.html;
         title = 'Half-Life 2';
         appId = 220;
         multipleMatches = [{id: 70, title: 'Half-Life'}, {id: 220, title: 'Half-Life 2'}];
@@ -26,31 +28,31 @@ describe("OOS.html", function() {
     });
 
     it("can buildLoadingSpan", function() {
-        expect(OOS.html.buildLoadingSpan(title)).toEqual(expectedLoadingSpan);
+        expect(html.buildLoadingSpan(title)).toEqual(expectedLoadingSpan);
     });
 
     it ("can buildOwnedSpan", function() {
-        expect(OOS.html.buildOwnedSpan(appId, title)).toEqual(expectedOwnedSpan);
+        expect(html.buildOwnedSpan(appId, title)).toEqual(expectedOwnedSpan);
     });
 
     it("can buildPossibleSpan", function() {
-        expect(OOS.html.buildPossibleSpan(appId, title)).toEqual(expectedPossibleSpan);
+        expect(html.buildPossibleSpan(appId, title)).toEqual(expectedPossibleSpan);
     });
 
     it("can buildGenericErrorSpan", function() {
-        expect(OOS.html.buildGenericErrorSpan(expectedError, title)).toEqual(expectedGenericErrorSpan);
+        expect(html.buildGenericErrorSpan(expectedError, title)).toEqual(expectedGenericErrorSpan);
     });
 
     it("can buildSteamIdErrorSpan", function() {
-        expect(OOS.html.buildSteamIdErrorSpan(title)).toEqual(expectedSteamIdErrorSpan);
+        expect(html.buildSteamIdErrorSpan(title)).toEqual(expectedSteamIdErrorSpan);
     });
 
     it("can buildNotOwnedSpan", function() {
-        expect(OOS.html.buildNotOwnedSpan(title)).toEqual(expectedNotOwnedSpan);
+        expect(html.buildNotOwnedSpan(title)).toEqual(expectedNotOwnedSpan);
     });
 
     it("can buildMultipleSpan", function() {
-        expect(OOS.html.buildMultipleSpan(title, multipleMatches)).toEqual(expectedMultipleSpan);
+        expect(html.buildMultipleSpan(title, multipleMatches)).toEqual(expectedMultipleSpan);
     });
 
     describe("buildOwnershipSpan", function() {
@@ -60,7 +62,7 @@ describe("OOS.html", function() {
                 spyOn(OOS.gamematcher, 'getOwnedGameMatches').and.returnValue(PromiseTester.resolve([]));
             });
             it("will buildNotOwnedSpan", function(done) {
-                OOS.html.buildOwnershipSpan(title).then(function(response) {
+                html.buildOwnershipSpan(title).then(function(response) {
                     expect(response.ownershipSpan).toEqual(expectedNotOwnedSpan);
                     done();
                 });
@@ -76,7 +78,7 @@ describe("OOS.html", function() {
                 spyOn(OOS.gamematcher, 'getOwnedGameMatches').and.returnValue(PromiseTester.resolve([match]));
             });
             it("will buildOwnedSpan", function(done) {
-                OOS.html.buildOwnershipSpan(title).then(function(response) {
+                html.buildOwnershipSpan(title).then(function(response) {
                     expect(response.ownershipSpan).toEqual(expectedOwnedSpan);
                     done();
                 });
@@ -88,7 +90,7 @@ describe("OOS.html", function() {
                 spyOn(OOS.gamematcher, 'getOwnedGameMatches').and.returnValue(PromiseTester.resolve(multipleMatches));
             });
             it("will buildMultipleSpan", function(done) {
-                OOS.html.buildOwnershipSpan(title).then(function(response) {
+                html.buildOwnershipSpan(title).then(function(response) {
                     expect(response.ownershipSpan).toEqual(expectedMultipleSpan);
                     done();
                 });
@@ -105,7 +107,7 @@ describe("OOS.html", function() {
                 spyOn(OOS.gamematcher, 'getOwnedGameMatches').and.returnValue(PromiseTester.resolve([match]));
             });
             it("will buildOwnedSpan", function(done) {
-                OOS.html.buildOwnershipSpan(title).then(function(response) {
+                html.buildOwnershipSpan(title).then(function(response) {
                     expect(response.ownershipSpan).toEqual(expectedPossibleSpan);
                     done();
                 });
@@ -117,7 +119,7 @@ describe("OOS.html", function() {
                 spyOn(OOS.gamematcher, 'getOwnedGameMatches').and.returnValue(PromiseTester.reject("Steam ID Not Set"));
             });
             it("will buildSteamIdErrorSpan", function(done) {
-                OOS.html.buildOwnershipSpan(title).then(function(response) {
+                html.buildOwnershipSpan(title).then(function(response) {
                     expect(response.ownershipSpan).toEqual(expectedSteamIdErrorSpan);
                     done();
                 });
@@ -129,7 +131,7 @@ describe("OOS.html", function() {
                 spyOn(OOS.gamematcher, 'getOwnedGameMatches').and.returnValue(PromiseTester.reject(expectedError));
             });
             it("will buildGenericErrorSpan", function(done) {
-                OOS.html.buildOwnershipSpan(title).then(function(response) {
+                html.buildOwnershipSpan(title).then(function(response) {
                     expect(response.ownershipSpan).toEqual(expectedGenericErrorSpan);
                     done();
                 });

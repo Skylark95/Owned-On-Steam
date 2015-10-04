@@ -1,10 +1,17 @@
 var OOS = OOS || {};
 OOS.util = {
     searchRegex: /[^a-zA-Z0-9\s]/g,
+    doubleSpaceRegex: /\s{2}/,
     cleanupTitle: function(title) {
-        return title.trim().replace(this.searchRegex, '').toLowerCase();
+        return title.replace(this.searchRegex, '')
+                    .replace(this.doubleSpaceRegex, ' ')
+                    .toLowerCase()
+                    .trim();
     },
     agressiveCleanupTitle: function(title) {
-        return title.trim().split(this.searchRegex)[0].toLowerCase();
+        return title.split(this.searchRegex)[0]
+                    .replace(this.doubleSpaceRegex, ' ')
+                    .toLowerCase()
+                    .trim();
     }
 };
