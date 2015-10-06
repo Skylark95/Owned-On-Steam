@@ -1,6 +1,7 @@
 var OOS = OOS || {};
 OOS.util = {
     searchRegex: /[^a-zA-Z0-9\s]/g,
+    agressiveSearchRegex: /[^a-zA-Z0-9\s\.']/g,
     doubleSpaceRegex: /\s{2}/,
     cleanupTitle: function(title) {
         return title.replace(this.searchRegex, '')
@@ -9,9 +10,6 @@ OOS.util = {
                     .trim();
     },
     agressiveCleanupTitle: function(title) {
-        return title.split(this.searchRegex)[0]
-                    .replace(this.doubleSpaceRegex, ' ')
-                    .toLowerCase()
-                    .trim();
+        return this.cleanupTitle(title.split(this.agressiveSearchRegex)[0]);
     }
 };

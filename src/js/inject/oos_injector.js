@@ -32,8 +32,11 @@ OOS.injector = {
                 contentAsHTML: true,
                 theme: 'oos_tooltipster_dark_border'
             },
-            config = $.extend({}, defaults, options);
-        $('.oos_ownership_link').tooltipster(config);
+            config = $.extend({}, defaults, options),
+            $oos = $('.oos_ownership_link'),
+            title = $oos.attr('title');
+        $oos.attr('title', title + '<div class="oos_tooltip_credits">Provided by Owned On Steam.</small>');
+        $oos.tooltipster(config);
     },
     /**
      * Removes the ownershipSpan from the DOM

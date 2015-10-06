@@ -43,6 +43,12 @@
     background-color: #a75124;
 }
 
+.oos_tooltip_credits {
+    padding-top: 8px;
+    font-size: x-small;
+    text-align: right;
+}
+
 .oos_tooltipster_dark_border {
 	border-radius: 5px;
 	border: 1px solid #000000;

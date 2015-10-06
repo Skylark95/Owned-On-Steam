@@ -25,6 +25,9 @@ describe("OOS.util", function() {
         it("will remove registered trademark symbol", function() {
             expect(util.cleanupTitle('The Witcher® 3: Wild Hunt')).toEqual('the witcher 3 wild hunt');
         });
+        it("will clean up Sid Meier's complicated titles", function() {
+            expect(util.cleanupTitle('Sid Meier\'s Civilization®: Beyond Earth™ - Rising Tide')).toEqual('sid meiers civilization beyond earth rising tide');
+        });
     });
     describe("agressiveCleanupTitle", function() {
         it("will convert to lowercase", function() {
@@ -35,6 +38,12 @@ describe("OOS.util", function() {
         });
         it("will trim title", function() {
             expect(util.agressiveCleanupTitle('   Mad Max    ')).toEqual('mad max');
+        });
+        it("will not match partial on apostrophe", function() {
+            expect(util.agressiveCleanupTitle('Sid Meier\'s Civilization®: Beyond Earth™ - Rising Tide')).toEqual('sid meiers civilization');
+        });
+        it("will not match partial on period", function() {
+            expect(util.agressiveCleanupTitle('L.A. Noire')).toEqual('la noire');
         });
         it("will match partial title with colon", function() {
             expect(util.agressiveCleanupTitle('Stealth Inc 2: A Game of Clones: Humble Deluxe Edition')).toEqual('stealth inc 2');
