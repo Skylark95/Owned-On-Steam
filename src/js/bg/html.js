@@ -28,17 +28,11 @@ OOS.html = {
     buildOwnershipSpan: function(title) {
         var me = this;
         return new Promise(function(resolve, reject) {
-            var response = {};
-            OOS.gamematcher.getOwnedGameMatches(title).then(function(matches) {
+            var response = {},
+                gamematcher = me.getGameMatcher();
+            gamematcher.getOwnedGameMatches(title).then(function(matches) {
                 if (matches.length === 1) {
-                    var id = matches[0].id,
-                        gameTitle = matches[0].title,
-                        possibleMatch = matches[0].possibleMatch;
-                    if (possibleMatch) {
-                        response.ownershipSpan = me.buildPossibleSpan(id, gameTitle);
-                    } else {
-                        response.ownershipSpan = me.buildOwnedSpan(id, gameTitle);
-                    }
+                    response.ownershipSpan = me.buildOwnershipSpanForSingleMatch(matches[0]);
                 } else if (matches.length === 0) {
                     response.ownershipSpan = me.buildNotOwnedSpan(title);
                 } else {
@@ -46,13 +40,27 @@ OOS.html = {
                 }
                 resolve(response);
             }).catch(function(reason) {
-                if (reason === 'Steam ID Not Set') {
-                    response.ownershipSpan = me.buildSteamIdErrorSpan(title);
-                } else {
-                    response.ownershipSpan = me.buildGenericErrorSpan(reason, title);
-                }
+                response.ownershipSpan = me.buildOwershipSpanForError(reason, title);
                 resolve(response);
             });
         });
+    },
+    buildOwnershipSpanForSingleMatch: function(match) {
+        var id = match.id,
+            gameTitle = match.title,
+            possibleMatch = match.possibleMatch;
+        if (possibleMatch) {
+            return this.buildPossibleSpan(id, gameTitle);
+        }
+        return this.buildOwnedSpan(id, gameTitle);
+    },
+    buildOwershipSpanForError: function(reason, title) {
+        if (reason === 'Steam ID Not Set') {
+            return this.buildSteamIdErrorSpan(title);
+        }
+        return this.buildGenericErrorSpan(reason, title);
+    },
+    getGameMatcher: function() {
+        return OOS.gamematcher;
     }
 };
